@@ -1,0 +1,43 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+fields:
+  title:
+    label: Title
+    type: text
+  slug:
+    label: Slug
+    type: text
+tabs:
+  fields:
+    content:
+      label: Content
+      type: richeditor
+      size: giant
+      tab: Edit
+    is_published:
+      label: Is the topic active?
+      type: switch
+      default: false
+      tab: Manage
+    featured_image:
+      label: Featured image
+      type: mediafinder
+      mode: image
+      imageWidth: 200
+      imageHeight: 200
+      tab: Manage
+    excerpt:
+      label: Excerpt
+      type: textarea
+      size: small
+      tab: Manage
+    categories:
+      label: Categories
+      type: relation
+      tab: Manage
+    author:
+      label: Author
+      type: relation
+      tab: Manage
+      nameFrom: email

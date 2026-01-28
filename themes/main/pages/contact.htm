@@ -1,0 +1,109 @@
+title = "Contact"
+layout = "default"
+url = "/contact"
+==
+
+<div class="contact-section section-padding--y">
+<div class="container">
+    <div class="section-heading-blog section-padding--b-2">
+        <div class="hero-subtitle">
+            <div class="hero-subtitle-icon">
+                {% partial 'icons/earth' %}
+            </div>
+            <div class="hero-subtitle-text">CONTACT US</div>
+        </div>
+        <div class="brand-title">
+            <h2>Together, let’s take your business further</h2>
+        </div>
+    </div>
+    <div class="contact-boxes">
+        <div class="contact-box">
+            <div class="icon-content">
+                {% partial 'icons/phone' %}
+                <p>(609) 598-3065 7980</p>
+            </div>
+            <div class="contact-text-content">
+                Need a quick response? Reach out to us on WhatsApp
+            </div>
+        </div>
+        <div class="contact-box">
+            <div class="icon-content">
+                {% partial 'icons/mail' %}
+                <p>hello@dexina.com</p>
+            </div>
+            <div class="contact-text-content">
+                Prefer email? Drop us a message anytime you want.
+            </div>
+        </div>
+        <div class="contact-box">
+            <div class="icon-content">
+                {% partial 'icons/map-pin' %}
+                <p>CA, USA</p>
+            </div>
+            <div class="contact-text-content">
+               Want to meet face-to-face or visit our workspace?
+            </div>
+        </div>
+    </div>
+    <div class="reach-out section-padding--t">
+        <div class="section-heading ">
+                <div class="hero-subtitle">
+                    <div class="hero-subtitle-icon">
+                        {% partial 'icons/target' %}
+                    </div>
+                    <div class="hero-subtitle-text">GET IN TOUCH</div>
+                </div>
+                <div class="brand-title">
+                    <h2>Reach Out To Us</h2>
+                </div>
+        </div>
+        <div class="contact-us-form">
+            <form action="">
+                <div class="contact-us-grid">
+                    <div class="contact-us-input-wrap">
+                        <label for="name" class="contact-us-label">Name </label>
+                        <input type="text" class="contact-us-input" id="name" placeholder="Enter your name" maxlength="256">
+                    </div>
+                    <div class="contact-us-input-wrap">  
+                         <label for="name" class="contact-us-label">Last Name</label>
+                        <input type="text" class="contact-us-input" id="name" placeholder="Enter your last name" maxlength="256">
+                    </div>
+                </div>
+                <div class="contact-us-grid">
+                    <div class="contact-us-input-wrap">
+                        <label for="companyName" class="contact-us-label">Company Name</label>
+                        <input type="text" class="contact-us-input" id="companyName" placeholder="Company name" maxlength="256">
+                    </div>
+                    <div class="contact-us-input-wrap">  
+                         <label for="webURL" class="contact-us-label">Website URL (if any)</label>
+                        <input type="text" class="contact-us-input" id="webURL" placeholder="www.example.com" maxlength="256">
+                    </div>
+                </div>
+                <div class="contact-us-select-wrap">
+                    <label for="services" class="contact-us-label">What services are you looking for? (select all that apply)</label>
+                    <select name="services" id="services" class="contact-us-select w-select">
+                        <option value>Select your services</option>
+                        <option value="First Choice">First Choice</option>
+                        <option value="Second Choice">Second Choice</option>
+                        <option value="Third Choice">Third Choice</option>
+                    </select>
+                </div>
+                <div class="contact-us-text-area-wrap">
+                <label for="projectDescription" class="contact-us-label">Project Description</label>
+                    <textarea name="projectDescription" id="projectDescription" class="contact-us-text-textarea" placeholder="Write Here..." maxlength="5000" ></textarea>
+                </div>
+                <div class="red-button contact-submit-btn">
+                    <button class="nav-link" type="submit" >
+                        Submit Now
+                        <span class="arrow-wrapper">
+                            <span class="arrow arrow-1">{% partial 'icons/arrow-right'%}</span>
+                            <span class="arrow arrow-2">{% partial 'icons/arrow-right'%}</span>
+                        </span>
+                        
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>

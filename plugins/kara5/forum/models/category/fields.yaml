@@ -1,0 +1,24 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  id:
+    label: ID
+    disabled: true
+  name:
+    label: Name
+    type: text
+  slug:
+    label: Slug
+    type: text
+  description:
+    label: Description
+    type: textarea
+    size: small
+  featured_image:
+    label: Featured Image
+    type: mediafinder
+    mode: image
+    imageWidth: 200
+    imageHeight: 200

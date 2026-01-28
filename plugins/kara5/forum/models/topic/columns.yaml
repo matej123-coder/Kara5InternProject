@@ -1,0 +1,21 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+  title:
+    label: Title
+    searchable: true
+  author:
+    label: Author
+    relation: author
+    select: concat(first_name, ' ', last_name)
+    searchable: true
+  is_published:
+    label: Is active?
+    type: Switch
+    sortable: true
+  created_at:
+    label: Created at
+    type: datetime
+    sortable: true

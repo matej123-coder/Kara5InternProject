@@ -1,0 +1,31 @@
+{% set posts = __SELF__.posts %}
+
+<div class="content-section">
+    <div class="posts-wrapper blog-content">
+    {% for post in posts %}
+    <div class="blog-item">
+        <a href="{{ 'news-single'|page({ slug: post.slug }) }}">
+            <div class="blog-item-thumb-wrap">
+                <img src="{{ post.featured_images[0].path }}" alt="Blog Item">
+            </div>
+            <div class="blog-item-body">
+                <div class="card-explanation">
+                    <h6 class="card-text">{{ post.title }}</h6>
+                </div>
+                <div class="card-dates">
+                    <div class="card-time">
+                        {% partial 'icons/time' %}
+                        <p>21 min</p>
+
+                    </div>
+                    <div class="card-date">
+                        {% partial 'icons/calendar' %}
+                        <p>{{ post.published_at|date('M d, Y') }}</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    {% endfor %}
+    </div>
+</div>

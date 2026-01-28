@@ -1,0 +1,52 @@
+url = "/blog"
+layout = "default"
+title = "blog"
+
+[blogCategories]
+slug = "{{ :category }}"
+displayEmpty = 1
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog"
+postPage = "blog/post"
+categoryFilter = "{{ :category }}"
+==
+<div class="blog-wrapper">
+    <div class="blog-section section-padding--y">
+        <div class="container">
+            <div class="section-heading-blog section-padding--b-2">
+                <div class="hero-subtitle">
+                    <div class="hero-subtitle-icon">
+                        {% partial 'icons/earth' %}
+                    </div>
+                    <div class="hero-subtitle-text">LATEST ARTICLES</div>
+                </div>
+                <div class="brand-title">
+                    <h2>Creative ideas and inspiration</h2>
+                </div>
+            </div>
+            <div class="category-menu">
+
+                <a href="{{ 'blog'|page }}"
+                    class="category-item {% if not blogCategories.currentCategorySlug %}active{% endif %}">
+                    <div>All Blog</div>
+                </a>
+
+                {% for category in blogCategories.categories %}
+                <a href="{{ 'category-archive'|page({ slug: category.slug }) }}"
+                    class="category-item {{ this.param.slug is same as category.slug ? 'active' }}">
+                    <div>{{ category.name }}</div>
+                </a>
+                {% endfor %}
+
+            </div>
+            {% component 'blogPosts' %}
+        </div>
+
+    </div>
+</div>
+</div>

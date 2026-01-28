@@ -1,0 +1,88 @@
+{% set post = __SELF__.post %}
+
+<div class="post-content section-padding--y">
+    <div class="container">
+        <div class="post-heading">
+            <h1>{{post.title}}</h1>
+        </div>
+        <div class="date-content">
+            <div class="date-time">
+                {%  partial 'icons/time'%}
+                <p>18 min</p>
+            </div>
+            <div class="date-calendar">
+                {% partial 'icons/calendar'%}
+                <p>{{post.published_at|date('M d, Y')}}</p>
+            </div>
+        </div>
+        {% if post.featured_images|length %}
+            <div class="blog-img">
+                <img src="{{post.featured_images[0].path}}" alt="BannerImg">
+            </div>
+         {% endif %}
+        <div class="blog-layout-content blog-dynamic-content">
+                {{post.content_html|raw}}
+        </div>
+        <div class="related-articles section-padding--t">
+            <div class="section-heading ">
+                <div class="hero-subtitle">
+                    <div class="hero-subtitle-icon">
+                        {% partial 'icons/article' %}
+                    </div>
+                    <div class="hero-subtitle-text">ARTICLES</div>
+                </div>
+                <div class="brand-title">
+                    <h2>Related Blogs</h2>
+                </div>
+            </div>  
+        </div>
+        <div class="related-articles-wrapper blog-content">
+             <div class="blog-item">
+                <a href="#">
+                    <div class="blog-item-thumb-wrap">
+                        <img src="https://cdn.prod.website-files.com/680cea8b34808eee313320a7/681b089953b224e105d964ab_thumb-3.webp" alt="Blog Item">
+                    </div>
+                <div class="blog-item-body">
+                    <div class="card-explanation">
+                        <h6 class="card-text">Make CMS work smarter in Webflow</h6>
+                    </div>
+                    <div class="card-dates">
+                        <div class="card-time">
+                            {% partial 'icons/time' %}
+                            <p>3 min</p>
+
+                        </div>
+                        <div class="card-date">
+                            {% partial 'icons/calendar' %}
+                            <p>May 7,2025</p>
+                        </div>
+                    </div>
+                </div>
+                </a>
+             </div>
+              <div class="blog-item">
+                <a href="#">
+                    <div class="blog-item-thumb-wrap">
+                        <img src="https://cdn.prod.website-files.com/680cea8b34808eee313320a7/681b08bd5eff013f7f2cc41b_thumb-4.webp" alt="Blog Item">
+                    </div>
+                <div class="blog-item-body">
+                    <div class="card-explanation">
+                        <h6 class="card-text">Writing clear copy for the web</h6>
+                    </div>
+                    <div class="card-dates">
+                        <div class="card-time">
+                            {% partial 'icons/time' %}
+                            <p>2 min</p>
+
+                        </div>
+                        <div class="card-date">
+                            {% partial 'icons/calendar' %}
+                            <p>May 7,2025</p>
+                        </div>
+                    </div>
+                </div>
+                </a>
+             </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+v1.0.1:
+    - Create Topics table
+    - create_topics_table.php
+v1.0.2:
+    - Create Categories table
+    - create_categories_table.php
+v1.0.3:
+    - Create Comments table
+    - create_comments_table.php
+v1.0.4:
+    - Create Categories-Topics table
+    - categories_topics.php

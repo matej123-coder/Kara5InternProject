@@ -1,0 +1,158 @@
+.hero-section{
+    opacity: 0;
+    transform: translateY(24px);
+    animation: heroFadeUp 0.6s ease-out forwards;
+   
+}
+@keyframes heroFadeUp{
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.hero-top-content{
+    max-width: 250px;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 8px;
+
+}
+.hero-subtitle{
+    display: flex;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 28px;
+    padding: 6px 16px 6px 6px;
+    display: inline-flex;
+}
+.hero-subtitle-icon{
+    background-color: #FC372D;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    flex-shrink: 0;
+    
+}
+.hero-subtitle-text{
+    font-size: 15px;
+    font-weight: 600;
+}
+.earth-icon{
+    color: white;
+}
+
+.hero-title{
+    max-width: 770px;
+}
+.hero-title-text{
+ font-size: 87px;
+ font-weight: 800;
+}
+.hero-bottom-content{
+    display: flex;
+    align-items: flex-end;
+    gap: 80px;
+}
+.hero-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+}
+.hero-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+.hero-text-wrap{
+    max-width: 350px;
+    margin-bottom: 20px;
+}
+.white-button{
+    background-color: white;
+    color: black;
+    padding:  13px 38px;    
+    border-radius: 100px;
+    margin-left: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.35s ease-out;
+    border: 1px solid #e0e0e0;
+}
+.white-button:hover{
+    background-color: #FC372D ;
+    color: white;
+ }
+ .white-button:hover .arrow-1{
+    transform: translateX(8px);
+    opacity: 0;
+  }
+  .white-button:hover .arrow-2{
+    transform: translateX(0px);
+    opacity: 1;
+    color: white;
+  }
+  .hero-buttons .white-button,.red-button{
+    flex-shrink: 0;
+  }
+  @media (max-width: 991.98px) {
+
+    .hero-layout {
+        display: flex;
+        flex-direction: column;
+      }
+    
+      .hero-bottom-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+      }
+    
+      .hero-top-content {
+        order: 3;
+        margin-top: 32px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        margin-left: 0;
+      }
+      .white-button,.red-button{
+            margin: 0;
+        }
+      .hero-buttons {
+        display: flex;
+        flex-direction: row; 
+        gap: 12px;
+        align-items: flex-start;
+      }
+      .hero-banner{
+        aspect-ratio: 4/3;
+      }
+      .hero-title-text{
+        font-size: 40px;
+        font-weight: 500;
+      }
+      .brand-heading{
+        font-size: 40px;
+        font-weight: 500;
+      }
+  }
+  .hero-banner{
+    background-image: url("../images/DexinaBanner.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position:center;
+    margin-top: 32px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    max-height: 700px;
+    width: 100%;
+  }

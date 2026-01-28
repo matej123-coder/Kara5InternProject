@@ -1,0 +1,80 @@
+<header>
+  <nav class="navbar navbar-expand-lg py-2 bg-white">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img
+          src="{{ 'globals/DexinaLogo.png' | media }}"
+          alt="Logo"
+          width="100"
+          class="d-inline-block align-text-top"
+        />
+        </a>
+      <button
+        class="navbar-toggler navbar-dark bg-dark collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarText"
+        aria-controls="navbarText"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+      </button>
+        
+      <div class="collapse navbar-collapse navbar-items p-sm-3" id="navbarText">
+        <div class="mobile-nav-divider d-lg-none"></div>
+        <ul class="navbar-nav mx-auto gap-3 mb-2 mb-lg-0 ">
+          <li class="nav-item" >
+            <a class="nav-link navbar-hovers ml-sm-4" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-hovers" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-hovers" href="#">Projects</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link navbar-hovers" href="#">Pricing </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-hovers" href="/blog">Blog </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle arrow-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages 
+                {% partial 'icons/arrow-down'%}
+             </a>
+           <div class="dropdown-menu d-lg-block" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item navbar-dropdown" href="#">Pricing Details</a>
+                <a class="dropdown-item navbar-dropdown" href="#">Blog Single</a>
+                <a class="dropdown-item navbar-dropdown" href="#">Style Guide</a>
+                <a class="dropdown-item navbar-dropdown" href="#">Licenses</a>
+                <a class="dropdown-item navbar-dropdown" href="#">Change Log</a>
+                <a class="dropdown-item navbar-dropdown" href="#">404 Page</a>
+                <a class="dropdown-item navbar-dropdown" href="#">Password Protected</a>
+            </div>
+          </li>
+        </ul>
+        <div class="d-flex ms-lg-auto align-items-center gap-3"  >
+        <a class="nav-link" href="#">
+        {% partial 'icons/cart' %}
+            Cart
+        </a>
+        <div class="red-button d-flex align-items-center">
+            <a class="nav-link" href="/contact">
+                Contact
+                <span class="arrow-wrapper">
+                    <span class="arrow arrow-1">{% partial 'icons/arrow-right'%}</span>
+                    <span class="arrow arrow-2">{% partial 'icons/arrow-right'%}</span>
+                </span>
+                
+            </a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
