@@ -1029,6 +1029,66 @@ color: red;
     font-size: 23px;
     font-weight: 700;
 }
+.alert{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    max-width: 350px;
+    padding: 16px 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    color: #fff;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideIn 0.5s ease-out, slideOut 0.5s ease-out 3.5s forwards;
+    z-index: 9999;
+}
+.alert-success{
+    background-color: #28a745;
+}
+.alert-error {
+    background-color: #dc3545;
+}
+
+.alert-info {
+    background-color: #17a2b8;
+}
+
+.alert-warning {
+    background-color: #ffc107;
+    color: #333;
+}
+.alert-close{
+    border: none;
+    color: white;
+    background-color: transparent;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateX(100%); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideOut{
+    0% {opacity: 1; transform: translateX(0);}
+    100%{opacity: 0; transform: translateX(100%); visibility: hidden;}
+}
+.error-message{
+    color: red;
+    background-color: #FFEEEE;
+    padding: 10px 15px;
+    
+}
+
+.contact-us-input-wrap:has(.error-message.oc-visible) .contact-us-input,
+.contact-us-select-wrap:has(.error-message.oc-visible) .contact-us-select,
+.contact-us-text-area-wrap:has(.error-message.oc-visible) .contact-us-text-textarea
+{
+    border-color: red;
+}
 @media screen and (max-width:1199px){
     .blog-item-body{
         gap: 16px;

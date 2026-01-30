@@ -15,11 +15,13 @@
    
   </head>
   <body>
-    {% flash %}
-        <div class="alert alert-{{ type }}">
-            {{ message }}
+    {% flash  %}
+        <div class="alert alert-success">
+           {{message}}
+           <button class="alert-close" onclick="this.parentElement.style.display='none';">&times;</button>
         </div>
     {% endflash %}
+        
     {% partial 'site/header' %}
     <main class="main-content" role="main">{% page %}</main>
     {% partial 'site/contact-section' %}

@@ -38,14 +38,5 @@ document.addEventListener("DOMContentLoaded", () => {
         shadow:false,
       },
       });
-    // document.querySelectorAll('.category-item').forEach(element =>{
-    //     element.addEventListener("click",(e)=>{
-    //         e.preventDefault()
-
-    //         document.querySelector(".category-menu a.active").classList.remove("active")
-    //         element.classList.add("active")
-
-    //     })
-    // })
 });
 
