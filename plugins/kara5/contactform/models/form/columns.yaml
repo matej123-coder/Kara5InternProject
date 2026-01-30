@@ -1,0 +1,23 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    fname:
+        label: First Name
+    lname:
+        label: Last Name
+    email:
+        label: Email
+    services:
+        label: Services
+    message:
+        label: Message
+    webURL:
+        label: Website URL
+    created_at:
+        label: Submitted
+        type: datetime

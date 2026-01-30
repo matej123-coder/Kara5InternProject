@@ -15,11 +15,16 @@
    
   </head>
   <body>
+    {% flash %}
+        <div class="alert alert-{{ type }}">
+            {{ message }}
+        </div>
+    {% endflash %}
     {% partial 'site/header' %}
-
     <main class="main-content" role="main">{% page %}</main>
     {% partial 'site/contact-section' %}
     {% partial 'site/footer' %}
      <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    {% framework extras %}
   </body>
 </html>

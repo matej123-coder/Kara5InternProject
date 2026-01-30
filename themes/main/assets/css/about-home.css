@@ -927,6 +927,108 @@ color: red;
     padding: 10px 20px;
     margin: 0;
 }
+.experience-block{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: var(--sec-pad-2);
+}
+.experience-description{
+
+    max-width: 280px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    
+}
+.experience-projects{
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+.experience-projects h4{
+    font-size: 72px;
+    font-weight: 700;
+}
+.value-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: var(--sec-pad-2);
+}
+.values-blocks{
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column: 1fr;
+    max-width: 1060px;
+}
+.value-block {
+    padding: 25px;
+    max-width: 660px;
+    width: 100%;
+    border: 1px solid #e0e0e0;
+}
+.value-content h2{
+    font-size: clamp(16px,3vw,23px);
+    font-weight: 700;
+}
+.value-content{
+    padding-top: var(--sec-pad);
+}
+.value-content p{
+    font-size: 13px;
+}
+.value-block i {
+    font-size: 32px;
+    border-radius: 50%;
+    padding: 14px;
+    line-height: 40px;
+    background-color: #F8F8F8;
+}
+.brand-title.ideas-heading{
+    max-width: 680px;
+    text-align: center;
+}
+.ideas-content{
+    display: flex;
+    align-items: center;
+    padding-top: var(--sec-pad-2);
+    gap: 15px ;
+    flex-wrap: wrap;
+}
+.ideas-item{
+    border: 1px solid #e0e0e0;
+    padding: 40px;
+    flex: 1 1 300px;
+}
+.ideas-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: max(3rem,6vw);
+}
+.ideas-bottom p {
+    font-size: 15px;
+    font-weight: 500;
+}
+.award-content{
+    padding-top: var(--sec-pad-2);
+}
+.award-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px 0px;
+}
+.award-header h2{
+    font-size: 23px;
+    font-weight: 700;
+}
 @media screen and (max-width:1199px){
     .blog-item-body{
         gap: 16px;
@@ -951,10 +1053,45 @@ color: red;
         padding-top: max(2rem,5vw);
         padding-bottom: max(2rem,5vw);
     }
+    .experience-description{
+      flex: 0 0 100%;
+      max-width: 100%; 
+      text-align: center;
+    }
+    .experience-projects{
+        flex: 0 0 calc(33.333% - 16px);
+        text-align: center;
+    }
+    .ideas-item{
+        flex: 0 1 300px;
+    }
 }
 @media screen and (max-width:767px){
     .blog-content{
         grid-template-columns: 1fr;
     }
+    .experience-projects{
+        flex: 0 0 100%;
+    }
+    .experience-projects h4{
+        font-size: 48px;
+    }
+    .values-blocks{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .value-block i{
+         font-size: 22px;
+        padding: 10px;
+        line-height: 30px;
+    }
+    .ideas-item{
+        flex: 1 1 300px;
+    }
+    .award-item{
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
-

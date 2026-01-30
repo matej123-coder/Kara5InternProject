@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Form
+
+# Model Form Field configuration
+form: $/kara5/contactform/models/form/fields.yaml
+
+# Model Class name
+modelClass: Kara5\ContactForm\Models\Form
+
+# Default redirect location
+defaultRedirect: kara5/contactform/forms
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: kara5/contactform/forms/update/:id
+    redirectClose: kara5/contactform/forms
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: kara5/contactform/forms
+    redirectClose: kara5/contactform/forms
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

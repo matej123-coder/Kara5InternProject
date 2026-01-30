@@ -1,0 +1,31 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+  id:
+    label: ID
+    disabled: true
+  fname:
+    label: First Name
+    type: text
+    searchable: true
+  lname:
+    label: Last Name
+    type: text
+    searchable: true
+  email:
+    label: Email
+    type: email
+    searchable: true
+  message:
+    label: Message
+    type: textarea
+    searchable: true
+  services:
+    label: Services
+    type: text
+    searchable: true
+  webURL:
+    label: Services
+    type: text

@@ -1,0 +1,53 @@
+<form data-request="{{ __SELF__ }}::onFormSubmit" data-request-validate data-request-flash method="post">
+    {{ form_token() }}
+    <div class="contact-us-grid">
+        <div class="contact-us-input-wrap">
+            <label for="fname" class="contact-us-label">Name </label>
+            <input type="text" class="contact-us-input" id="fname" placeholder="Enter your name" maxlength="256"
+                name="fname">
+            <p class="error-message" data-validate-for="fname"></p>
+        </div>
+        <div class="contact-us-input-wrap">
+            <label for="lname" class="contact-us-label">Last Name</label>
+            <input type="text" class="contact-us-input" id="lname" placeholder="Enter your last name" maxlength="256"
+                name="lname">
+        </div>
+    </div>
+    <div class="contact-us-grid">
+        <div class="contact-us-input-wrap">
+            <label for="email" class="contact-us-label">Email</label>
+            <input type="email" class="contact-us-input" id="email" placeholder="Email address" maxlength="256"
+                name="email">
+        </div>
+        <div class="contact-us-input-wrap">
+            <label for="webURL" class="contact-us-label">Website URL (if any)</label>
+            <input type="text" class="contact-us-input" id="webURL" placeholder="www.example.com" maxlength="256"
+                name="webURL">
+        </div>
+    </div>
+    <div class="contact-us-select-wrap">
+        <label for="services" class="contact-us-label">What services are you looking for? (select all that
+            apply)</label>
+        <select name="services" id="services" class="contact-us-select w-select">
+            <option value>Select your services</option>
+            <option value="First Choice">First Choice</option>
+            <option value="Second Choice">Second Choice</option>
+            <option value="Third Choice">Third Choice</option>
+        </select>
+    </div>
+    <div class="contact-us-text-area-wrap">
+        <label for="message" class="contact-us-label">Message</label>
+        <textarea name="message" id="message" class="contact-us-text-textarea"
+            placeholder="Write Here..." maxlength="5000"></textarea>
+    </div>
+    <div class="red-button contact-submit-btn">
+        <button class="nav-link" type="submit">
+            Submit Now
+            <span class="arrow-wrapper">
+                <span class="arrow arrow-1">{% partial 'icons/arrow-right'%}</span>
+                <span class="arrow arrow-2">{% partial 'icons/arrow-right'%}</span>
+            </span> 
+
+        </button>
+    </div>
+</form>

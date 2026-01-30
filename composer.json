@@ -15,7 +15,6 @@
         "rainlab/user-plugin": "^3.1",
         "rainlab/blog-plugin": "^1.7",
         "rainlab/translate-plugin": "^2.2",
-        "blakejones/magicforms-plugin": "^1.6",
         "october/drivers-plugin": "^2.0",
         "utopigs/seo-plugin": "^1.1"
     },
