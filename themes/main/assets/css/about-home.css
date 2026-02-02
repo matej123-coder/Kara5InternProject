@@ -247,6 +247,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-columns: 1fr;
     margin-bottom: 80px;
+    margin-top: 80px;
 }
 .projects-layout-3{
     column-gap: 140px;
@@ -265,7 +266,6 @@
     grid-template-columns: 1fr 1fr;
     grid-auto-columns: 1fr;
     margin-bottom: 80px;
-
   }   
 }
 @media (max-width:460px){
