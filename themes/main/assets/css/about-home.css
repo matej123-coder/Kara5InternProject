@@ -1133,6 +1133,9 @@ color: red;
 .section-heading-blog.portfolio .brand-title h2{
     max-width: 1000px;
 }
+.register-input-wrap{
+    margin-bottom: 24px;
+}
 @media screen and (max-width:1199px){
     .blog-item-body{
         gap: 16px;

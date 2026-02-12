@@ -1,4 +1,4 @@
-<form method="post" data-request="onRegister" data-request-flash>
+{# <form method="post" data-request="onRegister" data-request-flash>
     <input type="hidden" name="redirect" value="true" />
 
     {% if __SELF__.canRegister %}
@@ -69,6 +69,56 @@
     {% endif %}
 
     <div class="text-center">
+        <p class="mt-5 mb-1 text-body-secondary">
+            Already have an account? <a href="{{ 'account/login'|page }}">Sign in here</a>
+        </p>
+    </div>
+</form> #}
+<form method="post" data-request="onRegister" data-request-validate data-request-flash>
+    <div class="contact-us-select-wrap ">
+  
+         <div class="contact-us-input-wrap register-input-wrap">
+            <label for="first_name" class="contact-us-label">First Name </label>
+            <input type="text" class="contact-us-input" id="first_name" placeholder="Enter your name" maxlength="256"
+                name="first_name">
+            <p class="error-message" data-validate-for="first_name"></p>
+        </div>
+         <div class="contact-us-input-wrap register-input-wrap">
+            <label for="last_name" class="contact-us-label">Last Name</label>
+            <input type="text" class="contact-us-input" id="last_name" placeholder="Enter your last name" maxlength="256"
+                name="last_name">
+                <p class="error-message" data-validate-for="last_name"></p>
+          </div>
+        <div class="contact-us-input-wrap register-input-wrap">
+            <label for="username" class="contact-us-label">Username</label>
+            <input type="text" class="contact-us-input" id="username" placeholder="Enter your username" maxlength="256"
+                name="username">
+                <p class="error-message" data-validate-for="username"></p>
+        </div>
+        <div class="contact-us-input-wrap register-input-wrap">
+            <label for="email" class="contact-us-label">Email</label>
+            <input type="email" class="contact-us-input" id="email" placeholder="Email address" maxlength="256"
+                name="email">
+                <p class="error-message" data-validate-for="email"></p>
+        </div>
+        <div class="contact-us-input-wrap register-input-wrap">
+            <label for="password" class="contact-us-label">Password</label>
+            <input type="password" class="contact-us-input" id="password" placeholder="Enter your password " maxlength="256"
+                name="password">
+                <p class="error-message" data-validate-for="password"></p>
+        </div>
+    </div>
+    <div class="red-button contact-submit-btn">
+        <button class="nav-link" type="submit">
+            Submit Now
+            <span class="arrow-wrapper">
+                <span class="arrow arrow-1">{% partial 'icons/arrow-right'%}</span>
+                <span class="arrow arrow-2">{% partial 'icons/arrow-right'%}</span>
+            </span> 
+
+        </button>
+    </div>
+     <div class="">
         <p class="mt-5 mb-1 text-body-secondary">
             Already have an account? <a href="{{ 'account/login'|page }}">Sign in here</a>
         </p>

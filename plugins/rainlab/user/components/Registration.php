@@ -9,7 +9,9 @@ use RainLab\User\Models\Setting;
 use RainLab\User\Models\UserLog;
 use RainLab\User\Helpers\User as UserHelper;
 use Cms\Classes\ComponentBase;
+use Flash;
 use NotFoundException;
+use Redirect;
 
 /**
  * Registration displays registration forms
@@ -86,15 +88,17 @@ class Registration extends ComponentBase
         }
 
         // Redirect to the intended page after successful registration
-        if ($redirect = Cms::redirectIntendedFromPost()) {
-            return $redirect;
+        // if ($redirect = Cms::redirectIntendedFromPost()) {
+        //     return $redirect;
+        // }
+        Flash::success('You have been registered successfully!');
+        return Redirect::to('/');
         }
-    }
 
     /**
      * createNewUser implements the logic for creating a new user
      */
-    protected function createNewUser(array $input): User
+    protected function createNewUser(array $input):User
     {
         // If the password confirmation field is absent from the request payload,
         // skip it here for a smoother registration process. Every second counts!
@@ -107,6 +111,7 @@ class Registration extends ComponentBase
             'last_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => UserHelper::passwordRules(),
+            'username' => ['required', 'string', 'max:10'],
         ])->validate();
 
         $user = User::create([
@@ -114,13 +119,15 @@ class Registration extends ComponentBase
             'last_name' => $input['last_name'],
             'email' => $input['email'],
             'password' => $input['password'],
-            'password_confirmation' => $input['password_confirmation'],
+            'username' => $input['username'],
         ]);
 
         UserLog::createRecord($user->getKey(), UserLog::TYPE_NEW_USER, [
             'user_full_name' => $user->full_name,
         ]);
-
+        
+      
+        
         return $user;
     }
 
