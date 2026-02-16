@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('.custom-item-icon').forEach(iconWrapper => {
         iconWrapper.addEventListener("click", () => {
@@ -38,5 +39,58 @@ document.addEventListener("DOMContentLoaded", () => {
         shadow:false,
       },
       });
+      gsap.registerPlugin(ScrollTrigger);
+      
+     const elements = [
+       {title: ".hero-top-text", trigger: ".hero-top-text-wrap"},
+       {title: ".hero-gsap", trigger: ".hero-gsap-wrapper"},
+       { title: ".hero-title-text", trigger: ".hero-title"},
+       { title: ".hero-banner", trigger: ".hero-banner-wrapper"},   
+       { title: ".hero-text", trigger: ".hero-text-wrap"},
+       { title: ".hero-buttons", trigger: ".hero-buttons-wrapper"},
+       { title: ".gsap-arrow-link" , trigger: ".gsap-arrow-wrapper"}
+     ]
+     elements.forEach((el)=>{
+        gsap.fromTo(el.title, {y: 300, opacity: 0}, 
+            {duration: 1, opacity:1,y:0, ease: "power1.out",scrollTrigger : {
+                trigger: el.trigger,
+                start: "top bottom",
+                // toggleActions: "play pause resume reset"
+            }}
+        )
+     })
+    // gsap.fromTo(".hero-top-text-wrap",
+    //     { y: 100, opacity: 0 },
+    //     { duration: 0.8, y: 0, opacity: 1,  scrollTrigger: {
+    //         trigger: ".hero-top-text-wrap",
+    //         start: "top bottom",
+    //         toggleActions: "play pause resume reset",
+    //     }}
+    // );
+    // gsap.fromTo(".hero-gsap",
+    //     { y: 100, opacity: 0 },
+    //     { duration: 0.8, y: 0, opacity: 1,  scrollTrigger: {
+    //         trigger: ".hero-gsap",
+    //         start: "top bottom",
+    //         toggleActions: "play pause resume reset",
+    //     }}
+    // );
+
+    //  gsap.fromTo(".hero-title-text",
+    //     { y: 100, opacity: 0 },
+    //     { duration: 1, y: 0, opacity: 1, ease: "power2.out" , scrollTrigger: {
+    //         trigger: ".hero-title",
+    //         start: "top 75%",
+    //         toggleActions: "play pause resume reverse",
+    //     }}
+    // );
+    // gsap.fromTo(".hero-banner",
+    //     { y: 300, opacity: 0 },
+    //     { duration: 1, y: 0, opacity: 1, ease: "power2.out" , scrollTrigger: {
+    //         trigger: ".hero-banner-wrapper",
+    //         start: "top 75%",
+    //         toggleActions: "play pause resume reverse",
+    //     }}
+    // );
 });
 

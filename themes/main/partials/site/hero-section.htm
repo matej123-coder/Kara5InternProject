@@ -2,20 +2,24 @@
     <div class="container">
         <div class="hero-layout d-flex flex-column">
             <div class="hero-top-content">
-                <a href="#" class="nav-link">
-                    {% partial 'icons/right-up-arrow' %}
-                </a>
+                <div class="gsap-arrow-wrapper">
+                    <a href="#" class="nav-link gsap-arrow-link">
+                        {% partial 'icons/right-up-arrow' %}
+                    </a>
+                </div>
                 <div class="hero-top-text-wrap">
-                    <p>We are available for new project. Have any project idea in your mind, Write a line about it.</p>
+                    <p class="hero-top-text">We are available for new project. Have any project idea in your mind, Write a line about it.</p>
                 </div>
             </div>
             <div class="hero-bottom-content mt-3">
                 <div class="hero-left">
-                    <div class="hero-subtitle">
+                    <div class="hero-gsap-wrapper">
+                     <div class="hero-subtitle hero-gsap">
                         <div class="hero-subtitle-icon">
                             {% partial 'icons/earth' %}
                         </div>
                          <div class="hero-subtitle-text"> DESIGN & DEVELOPMENT AGENCY</div>
+                      </div>
                     </div>
                     <div class="hero-title">
                         <h1 class="hero-title-text">
@@ -29,7 +33,8 @@
                     <div class="hero-text-wrap">
                         <p class="hero-text">Sincerely, it's the final time that they've been given a furnished common. To avoid class, tidy them up. He has a wide-ranging influence.</p>
                     </div>
-                    <div class="hero-buttons">
+                    <div class="hero-buttons-wrapper">
+                        <div class="hero-buttons">
                         <div class="red-button">
                             <a class="nav-link contact-link" href="#">
                                 Book a call
@@ -48,10 +53,13 @@
                                 </span>
                             </a>
                         </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="hero-banner"></div>
+    <div class="hero-banner-wrapper">
+        <div class="hero-banner"></div>
+    </div>
 </div>
