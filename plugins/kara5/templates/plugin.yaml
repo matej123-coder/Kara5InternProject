@@ -1,0 +1,6 @@
+plugin:
+    name: 'kara5.templates::lang.plugin.name'
+    description: 'kara5.templates::lang.plugin.description'
+    author: Kara5
+    icon: oc-icon-adjust
+    homepage: ''
